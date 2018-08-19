@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kt9-Gr-2Dh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="qtK-4C-0DR">
+            <objects>
+                <viewController id="T4h-FP-tPw" customClass="ViewController2" customModule="TabBarWithSearchOption" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZKc-hM-uEq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9t0-no-evG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="GXp-AJ-TBF"/>
+                    <navigationItem key="navigationItem" id="Txo-IQ-mh0"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="T6f-iA-Xse" id="VXa-Ri-ppf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ulv-ug-068" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="T6f-iA-Xse">
+                    <connections>
+                        <outlet property="delegate" destination="T4h-FP-tPw" id="W3J-XB-3Sm"/>
+                        <outlet property="searchContentsController" destination="T4h-FP-tPw" id="yOP-iC-BA9"/>
+                        <outlet property="searchResultsDataSource" destination="T4h-FP-tPw" id="1nS-5z-xYY"/>
+                        <outlet property="searchResultsDelegate" destination="T4h-FP-tPw" id="nsJ-Et-zGL"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="489" y="191"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="uI0-gm-dbC">
+            <objects>
+                <viewController id="sjx-zA-x8g" customClass="ViewController" customModule="TabBarWithSearchOption" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMD-Jf-Qnx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="riD-pS-6U9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="j1D-qO-yna"/>
+                    <navigationItem key="navigationItem" title="Title" id="HSX-LT-3Z0"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Kfk-ci-Oc1" id="paG-vE-Age"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGB-FZ-dF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Kfk-ci-Oc1">
+                    <connections>
+                        <outlet property="delegate" destination="sjx-zA-x8g" id="Djw-ih-Ftq"/>
+                        <outlet property="searchContentsController" destination="sjx-zA-x8g" id="kCr-Za-O8F"/>
+                        <outlet property="searchResultsDataSource" destination="sjx-zA-x8g" id="y1R-xH-umR"/>
+                        <outlet property="searchResultsDelegate" destination="sjx-zA-x8g" id="b3s-Wb-QYg"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="490" y="-497"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="u9U-ZE-1gO">
+            <objects>
+                <navigationController id="k9U-mG-pog" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="87c-AJ-d0t"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xbK-G6-Kux">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sjx-zA-x8g" kind="relationship" relationship="rootViewController" id="5IM-eb-kCS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcM-qW-4rJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-497"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="A71-nS-ATW">
+            <objects>
+                <tabBarController id="kt9-Gr-2Dh" customClass="TabBarViewController" customModule="TabBarWithSearchOption" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MPz-5d-Rbl"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PrB-W9-PHu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="k9U-mG-pog" kind="relationship" relationship="viewControllers" id="hfj-Ph-EVY"/>
+                        <segue destination="aZx-8a-UBY" kind="relationship" relationship="viewControllers" id="dbJ-9Y-ueh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njM-O7-tF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1370" y="-130"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="baJ-UY-kxE">
+            <objects>
+                <navigationController id="aZx-8a-UBY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="k5X-3s-jHN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0u3-JD-dBT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T4h-FP-tPw" kind="relationship" relationship="rootViewController" id="tYT-un-vHx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0JV-nY-GNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="192"/>
+        </scene>
+    </scenes>
+</document>

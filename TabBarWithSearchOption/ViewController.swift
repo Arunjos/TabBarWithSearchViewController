@@ -15,8 +15,16 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 11, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        } 
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if #available(iOS 11.0, *) {
-            
             //Setup Search Controller
             self.searchController.obscuresBackgroundDuringPresentation = false
             self.searchController.searchBar.placeholder = "Search"
@@ -24,13 +32,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
             self.searchController.searchBar.delegate = self
             self.definesPresentationContext = true
             self.navigationItem.searchController = searchController
-            self.navigationItem.title = "Test1ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"
+            self.navigationItem.title = "Heading 1"
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
-    override func viewWillDisappear(_ animated: Bool) {
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         self.navigationItem.searchController = nil
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

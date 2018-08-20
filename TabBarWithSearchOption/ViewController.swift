@@ -18,13 +18,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         if #available(iOS 11, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationController?.navigationItem.largeTitleDisplayMode = .always
-        } 
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if #available(iOS 11.0, *) {
             //Setup Search Controller
             self.searchController.obscuresBackgroundDuringPresentation = false
             self.searchController.searchBar.placeholder = "Search"
@@ -32,9 +25,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
             self.searchController.searchBar.delegate = self
             self.definesPresentationContext = true
             self.navigationItem.searchController = searchController
-            self.navigationItem.title = "Heading 1"
+            self.navigationItem.title = "Heading 2"
         }
-    }
+        // Do any additional setup after loading the view, typically from a nib.
+    } 
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
